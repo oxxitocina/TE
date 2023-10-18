@@ -1,3 +1,5 @@
 :root {
     --header-height: 4rem
+
+    --font-size-l: clamp(1rem, 0.8rem + 1vw, 2rem);
 }

@@ -5,16 +5,25 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-
+  flex: 1;
 }
 
 .wrapper {
-
+  flex: 1;
 }
 
-.search-wrapper {
+.searchWrapper {
+    flex: 2;
+}
 
+.nav {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    font-size: 1.1rem;
+    font-weight: 500;
 }

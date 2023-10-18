@@ -22,7 +22,8 @@
     "i18next-http-backend": "^2.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^13.2.2"
+    "react-i18next": "^13.2.2",
+    "vite-plugin-svgr": "^4.1.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.3",
