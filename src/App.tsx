@@ -1,7 +1,7 @@
-import "./App.scss";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "./setup/providers/ThemeProvider";
 import classNames from "classnames";
+import { Header } from "./widgets/Header";
 
 function App() {
   const { t, i18n } = useTranslation("common");
@@ -13,6 +13,7 @@ function App() {
 
   return (
     <div className={classNames('app', [theme])}>
+      <Header/>
       {t("test")}
       <button onClick={handleClick}>{t("change lang")}</button>
       <button onClick={toggleTheme}>{t("change theme")}</button>

@@ -1,0 +1,18 @@
+@import url("reset.css");
+@import url("global.css");
+@import url("themes/dark.css");
+@import url("themes/light.css");
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.app {
+  min-height: 100%;
+  width: 100%;
+  background-color: var(--background);
+}

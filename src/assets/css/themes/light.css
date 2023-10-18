@@ -1,0 +1,7 @@
+.light-theme {
+    --text: hsl(0deg 0% 0%);
+--background: hsl(0deg 0% 90%);
+--primary: hsl(0deg 37% 25%);
+--secondary: hsl(0deg 36% 89%);
+--accent: hsl(0deg 37% 49%);
+}

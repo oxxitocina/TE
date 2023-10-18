@@ -1,0 +1,7 @@
+.dark-theme {
+    --text: hsl(0deg 0% 98%);
+--background: hsl(0deg 0% 2%);
+--primary: hsl(247deg 5% 65%);
+--secondary: hsl(120deg 3% 6%);
+--accent: hsl(5deg 5% 46%);
+}
