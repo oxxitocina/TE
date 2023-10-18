@@ -6,6 +6,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid hsl(0, 2%, 64%);
 }
 
 .logo {
@@ -26,4 +28,5 @@
     justify-content: flex-end;
     font-size: 1.1rem;
     font-weight: 500;
+    align-items: center;
 }

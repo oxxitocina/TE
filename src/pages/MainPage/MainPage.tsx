@@ -1,6 +1,7 @@
 import  classNames  from "classnames"
 import cls from './MainPage.module.css'
 import LearningImage from '@/assets/img/learning.png'
+import { Button, ButtonTheme } from "@/common/Button/Button"
 
 interface MainPageProps {
     className?: string
@@ -15,6 +16,10 @@ export const MainPage = ({className}: MainPageProps) => {
             </div>
             <div className={cls.content}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam deleniti, quos
+            </div>
+            <div className={cls.buttons_wrapper}>
+                <Button theme={ButtonTheme.SECONDARY}>How does it work</Button>
+                <Button theme={ButtonTheme.PRIMARY}>Get Started</Button>
             </div>
         </div>
         <div className={cls.second_wrapper}>

@@ -1,4 +1,5 @@
 .MainPage {
+    height: 50rem;
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
@@ -6,14 +7,15 @@
 }
 
 .heading {
-    font-size: var(--font-size-l);
+    font-size: clamp(1rem, 0.2rem + 4vw, 4rem);
+    text-align: start;
 }
 
-.first_wrapper {
-    flex: 1;
+.content {
+    width: 15rem;
 }
 
-.first_wrapper, .second_wrapper {
+.second_wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -21,13 +23,22 @@
     position: relative;
 }
 
+.first_wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
 .window {
     position: absolute;
     background-color: white;
     padding: 12px;
     border-radius: 10px;
-    bottom: 1px;
-    right: 4rem;
+    bottom: 12rem;
+    right: 6rem;
+    color: black;
 }
 
 .image_wrapper {
@@ -40,6 +51,11 @@
         object-fit: cover;
         border-radius: 50%;
     }
+}
+
+.buttons_wrapper {
+    display: flex;
+    gap: 20px;
 }
 
 

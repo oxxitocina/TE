@@ -3,6 +3,7 @@ import cls from './Header.module.css'
 import { SearchBar } from "@/common/SearchBar/SearchBar"
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/setup/providers/ThemeProvider";
+import { Button, ButtonTheme } from "@/common/Button/Button";
 
 interface HeaderProps {
     className?: string

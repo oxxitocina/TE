@@ -16,4 +16,5 @@ html, body {
   width: 100%;
   background-color: var(--background);
   font-family: 'Roboto', sans-serif;
+  color: var(--text);
 }
