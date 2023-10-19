@@ -5,3 +5,40 @@
     min-height: 50rem;
     padding-top: 2rem;
 }
+
+.accordion {
+    border-radius: 7px;
+    background-color: inherit;
+    padding-top: 6rem;
+}
+
+.accordion_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.accordion_button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 7px;
+    height: 3rem;
+}
+
+.chevron_icon {
+    color: var(--accent);
+}
+
+.panel {
+    min-height: 10rem;
+    width: 100%;
+    background-color: var(--secondary);
+}
+
+.panel_wrapper {
+    width: 100%;
+}

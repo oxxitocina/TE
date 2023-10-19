@@ -2,7 +2,9 @@ import classNames from "classnames"
 import cls from './HandbookPage.module.css'
 import { TopicsSection } from "./Components/TopicsSection/TopicsSection"
 import { Disclosure } from '@headlessui/react'
-import ChevronUpIcon from '@/assets/svg/search.svg?react'
+import ChevronUpIcon from '@/assets/svg/chevron-up.svg?react'
+import ChevronDownIcon from '@/assets/svg/chevron-down.svg?react'
+import { Button } from "@/common/Button/Button"
 
 interface HandbookProps {
     className?: string
@@ -14,43 +16,113 @@ export const HandbookPage = ({className}: HandbookProps) => {
       <TopicsSection/>
 
       
-      <div className="w-full px-4 pt-16">
-      <div className="mx-auto w-full max-w-md rounded-2xl bg-white p-2">
-        <Disclosure>
-          {({ open }) => (
-            <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                <span>What is your refund policy?</span>
-                <ChevronUpIcon
-                  className={`${
-                    open ? 'rotate-180 transform' : ''
-                  } h-5 w-5 text-purple-500`}
-                />
-              </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                If you're unhappy with your purchase for any reason, email us
-                within 90 days and we'll refund you in full, no questions asked.
-              </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
-        <Disclosure as="div" className="mt-2">
-          {({ open }) => (
-            <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                <span>Do you offer technical support?</span>
-                <ChevronUpIcon
-                  className={`${
-                    open ? 'rotate-180 transform' : ''
-                  } h-5 w-5 text-purple-500`}
-                />
-              </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                No.
-              </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
+    <div className={cls.accordion}>
+      <div className={cls.accordion_wrapper}>
+        <div className={cls.panel_wrapper}>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className={cls.accordion_button}>
+                  <span>
+                    <Button>1</Button>
+                    What is your refund policy?</span>
+                  {open ? <ChevronDownIcon className={cls.chevron_icon}/> : <ChevronUpIcon className={cls.chevron_icon}/>}
+                </Disclosure.Button>
+                <Disclosure.Panel className={cls.panel}>
+                  If you're unhappy with your purchase for any reason, email us
+                  within 90 days and we'll refund you in full, no questions asked.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+        </div>
+
+        <div className={cls.panel_wrapper}>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className={cls.accordion_button}>
+                  <span>What is your refund policy?</span>
+                  {open ? <ChevronDownIcon className={cls.chevron_icon}/> : <ChevronUpIcon className={cls.chevron_icon}/>}
+                </Disclosure.Button>
+                <Disclosure.Panel className={cls.panel}>
+                  If you're unhappy with your purchase for any reason, email us
+                  within 90 days and we'll refund you in full, no questions asked.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+        </div>
+
+        <div className={cls.panel_wrapper}>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className={cls.accordion_button}>
+                  <span>What is your refund policy?</span>
+                  {open ? <ChevronDownIcon className={cls.chevron_icon}/> : <ChevronUpIcon className={cls.chevron_icon}/>}
+                </Disclosure.Button>
+                <Disclosure.Panel className={cls.panel}>
+                  If you're unhappy with your purchase for any reason, email us
+                  within 90 days and we'll refund you in full, no questions asked.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+        </div>
+
+        <div className={cls.panel_wrapper}>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className={cls.accordion_button}>
+                  <span>What is your refund policy?</span>
+                  {open ? <ChevronDownIcon className={cls.chevron_icon}/> : <ChevronUpIcon className={cls.chevron_icon}/>}
+                </Disclosure.Button>
+                <Disclosure.Panel className={cls.panel}>
+                  If you're unhappy with your purchase for any reason, email us
+                  within 90 days and we'll refund you in full, no questions asked.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+        </div>
+
+        <div className={cls.panel_wrapper}>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className={cls.accordion_button}>
+                  <span>What is your refund policy?</span>
+                  {open ? <ChevronDownIcon className={cls.chevron_icon}/> : <ChevronUpIcon className={cls.chevron_icon}/>}
+                </Disclosure.Button>
+                <Disclosure.Panel className={cls.panel}>
+                  If you're unhappy with your purchase for any reason, email us
+                  within 90 days and we'll refund you in full, no questions asked.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+        </div>
+
+        <div className={cls.panel_wrapper}>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className={cls.accordion_button}>
+                  <span>What is your refund policy?</span>
+                  {open ? <ChevronDownIcon className={cls.chevron_icon}/> : <ChevronUpIcon className={cls.chevron_icon}/>}
+                </Disclosure.Button>
+                <Disclosure.Panel className={cls.panel}>
+                  If you're unhappy with your purchase for any reason, email us
+                  within 90 days and we'll refund you in full, no questions asked.
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+        </div>
+
+        
       </div>
     </div>
 
