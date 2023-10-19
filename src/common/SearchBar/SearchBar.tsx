@@ -1,13 +1,13 @@
-import  classNames from 'classnames'
-import cls from './SearchBar.module.css'
-import SearchIcon from '@/assets/svg/search.svg'
-import { useRef } from 'react'
+import classNames from "classnames";
+import cls from "./SearchBar.module.css";
+import SearchIcon from "@/assets/svg/search.svg";
+import { useRef } from "react";
 
 interface SearchBarProps {
-    className?: string
+  className?: string;
 }
 
-export const SearchBar = ({className}: SearchBarProps) => {
+export const SearchBar = ({ className }: SearchBarProps) => {
   const ref = useRef(null);
 
   const handleClick = () => {
@@ -15,20 +15,20 @@ export const SearchBar = ({className}: SearchBarProps) => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+  };
 
   return (
-    <div className={classNames(cls.searchBar, {}, [className])} onClick={handleClick}>
-        <form onSubmit={handleSubmit}>
-            <button type='submit' className={cls.iconButton}>
-              <img src={SearchIcon}/>
-            </button>
-            <input ref={ref} className={cls.search} placeholder='Search'></input>
-        </form>
+    <div
+      className={classNames(cls.searchBar, {}, [className])}
+      onClick={handleClick}
+    >
+      <form onSubmit={handleSubmit}>
+        <button type="submit" className={cls.iconButton}>
+          <img src={SearchIcon} />
+        </button>
+        <input ref={ref} className={cls.search} placeholder="Search"></input>
+      </form>
     </div>
-  )
-}
-
-
-
+  );
+};

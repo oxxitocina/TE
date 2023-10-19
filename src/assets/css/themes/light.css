@@ -1,7 +1,7 @@
 .light-theme {
-    --text: #020512;
---background: #d5dffb;
---primary: #4a75ed;
---secondary: #b0c3f7;
---accent: #1444c8;
+  --text: #020512;
+  --background: #d5dffb;
+  --primary: #4a75ed;
+  --secondary: #b0c3f7;
+  --accent: #1444c8;
 }

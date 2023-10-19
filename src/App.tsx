@@ -2,14 +2,17 @@ import { useTheme } from "./setup/providers/ThemeProvider";
 import classNames from "classnames";
 import { Header } from "./widgets/Header";
 import { MainPage } from "./pages/MainPage";
+import { Footer } from "./widgets/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
 
   return (
-    <div className={classNames('app', [theme])}>
-      <Header/>
-      <MainPage/>
+    <div className={classNames("app", [theme])}>
+      <Header />
+        <Outlet/>
+      <Footer/>
     </div>
   );
 }

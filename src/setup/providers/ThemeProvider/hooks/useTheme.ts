@@ -1,22 +1,20 @@
 import { Theme } from "../context/ThemeContext";
-import { ThemeContext } from "../context/ThemeContext";
+import { ThemeContext, THEME_LOCALSTORAGE_KEY } from "../context/ThemeContext";
 import { useContext } from "react";
 
 interface useThemeProps {
-    theme: Theme,
-    toggleTheme: () => void
+  theme: Theme;
+  toggleTheme: () => void;
 }
 
 export function useTheme(): useThemeProps {
-    const { theme, setTheme } = useContext(ThemeContext)
+  const { theme, setTheme } = useContext(ThemeContext);
 
-    function toggleTheme() {
-        console.log(theme)
-        const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
-        console.log('waea')
-        setTheme(newTheme)
-        console.log(newTheme, theme)
-    }
+  function toggleTheme() {
+    const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
+    localStorage.setItem(THEME_LOCALSTORAGE_KEY, newTheme);
+    setTheme(newTheme);
+  }
 
-    return { theme, toggleTheme }
+  return { theme, toggleTheme };
 }

@@ -1,0 +1,56 @@
+.info_section {
+  padding-top: 2rem;
+}
+
+.work_section {
+    display: grid;
+    height: 40rem;
+    background-color: var(--secondary);
+    grid-template: "info-box first second" 1fr "info-box third fourth" 1fr / 1.2fr 1fr 1fr;
+    border-radius: 7px;
+    padding: 6rem;
+    gap: 20px;
+    padding-top: 2rem;
+  }
+  
+  .info_box {
+    grid-area: info-box;
+  }
+  
+  .first {
+    grid-area: first;
+  }
+  
+  .second {
+    grid-area: second;
+  }
+  
+  .third {
+    grid-area: third;
+  }
+  
+  .fourth {
+    grid-area: fourth;
+  }
+  
+  .title {
+    font-size: var(--font-size-m);
+  }
+  
+  .text {
+    font-size: var(--font-size-s);
+  }
+  
+  .column {
+    display: flex;
+  }
+  
+  .number {
+    flex: 1;
+    font-size: var(--font-size-m);
+    color: var(--accent);
+  }
+  
+  .text_content {
+    flex: 9;
+  }

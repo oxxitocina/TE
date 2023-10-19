@@ -1,5 +1,6 @@
 :root {
-    --header-height: 4rem
-
-    --font-size-l: clamp(1rem, 0.8rem + 1vw, 2rem);
+  --header-height: 4rem;
+  --font-size-s: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  --font-size-m: clamp(1rem, 0.6rem + 2vw, 3rem);
+  --font-size-l: clamp(1rem, 0.2rem + 4vw, 4rem);
 }

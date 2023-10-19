@@ -3,8 +3,10 @@
 @import url("themes/dark.css");
 @import url("themes/light.css");
 
-html, body {
+html,
+body {
   height: 100%;
+  box-sizing: border-box;
 }
 
 #root {
@@ -15,6 +17,6 @@ html, body {
   min-height: 100%;
   width: 100%;
   background-color: var(--background);
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   color: var(--text);
 }
