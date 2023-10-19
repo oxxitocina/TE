@@ -9,6 +9,11 @@
   padding: 15px;
   border-bottom: 1px solid hsl(0deg 2% 64%);
   box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+    color: var(--text);
+  }
 }
 
 .logo {
@@ -34,11 +39,6 @@
 
   li {
     cursor: pointer;
-  }
-
-  a {
-    text-decoration: none;
-    color: var(--text);
   }
 }
 

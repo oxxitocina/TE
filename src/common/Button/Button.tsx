@@ -8,19 +8,26 @@ export enum ButtonTheme {
   ACCENT = "accent",
   CLEAR = "clear",
 }
+export enum ButtonSize {
+  DEFAULT = 'default',
+  S = 'small',
+  M = 'medium',
+  L = 'large'
+}
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   children: ReactNode;
   theme?: ButtonTheme;
+  size?: ButtonSize;
 }
 
 export const Button = (props: ButtonProps) => {
-  const { className, children, theme = ButtonTheme.PRIMARY, ...other } = props;
+  const { className, children, theme = ButtonTheme.PRIMARY, size = ButtonSize.DEFAULT, ...other } = props;
 
   return (
     <button
-      className={classNames(cls.Button, {}, [className, cls[theme]])}
+      className={classNames(cls.Button, {}, [className, cls[theme], cls[size]])}
       {...other}
     >
       {children}

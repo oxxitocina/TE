@@ -24,7 +24,7 @@ export const Header = ({ className }: HeaderProps) => {
 
   return (
     <div className={classNames(cls.header, {}, [className])}>
-      <div className={cls.logo}>BrainWave</div>
+      <div className={cls.logo}><Link to={Routes.MAIN.path}>BrainWave</Link></div>
       <div className={cls.searchWrapper}>
         <SearchBar />
       </div>
