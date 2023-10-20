@@ -8,6 +8,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Routes } from "./setup/consts/routes/routes";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query'
+
+const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
   {
@@ -21,13 +27,15 @@ const router = createBrowserRouter([
       {
         path: Routes.HANDBOOK.path,
         element: Routes.HANDBOOK.element
-      }
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
+  <QueryClientProvider client={queryClient}>
   <ThemeProvider>
     <RouterProvider router={router} />
-  </ThemeProvider>,
+  </ThemeProvider>
+  </QueryClientProvider>,
 );

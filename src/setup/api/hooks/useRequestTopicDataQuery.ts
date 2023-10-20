@@ -5,6 +5,6 @@ interface useRequestTopicDataQueryParams {
     topic: string
 }
 
-export const useRequestTopicDataQuery = ({topic}: useRequestTopicDataQueryParams) => {
+export const useRequestTopicDataQuery = ({topic}: useRequestTopicDataQueryParams) => 
     useQuery(['openai', topic], () => requestByTopicData(topic))
-}
+
