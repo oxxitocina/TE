@@ -8,7 +8,7 @@ export const Routes = {
         element: <MainPage/>
     },
     HANDBOOK: {
-        path: '/handbook',
+        path: '/handbook/:topicName',
         element: <HandbookPage/>
     },
     NOT_FOUND_PAGE: {

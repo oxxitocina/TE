@@ -50,7 +50,7 @@ export const Header = ({ className }: HeaderProps) => {
             </IconButton>
           </li>
           <li><Link to={Routes.MAIN.path}>Home</Link></li>
-          <li><Link to={Routes.HANDBOOK.path}>Handbook</Link></li>
+          <li><Link to={`/handbook/main`}>Handbook</Link></li>
           <li onClick={handleLoginClick}>Login</li>
         </ul>
       </div>

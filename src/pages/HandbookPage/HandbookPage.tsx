@@ -5,6 +5,8 @@ import { Disclosure } from '@headlessui/react'
 import ChevronUpIcon from '@/assets/svg/chevron-up.svg?react'
 import ChevronDownIcon from '@/assets/svg/chevron-down.svg?react'
 import { Button, ButtonSize } from "@/common/Button/Button"
+import { useParams } from "react-router-dom"
+import { useRequestTopicDataQuery } from "@/setup/api"
 
 interface HandbookProps {
     className?: string
@@ -12,26 +14,8 @@ interface HandbookProps {
 
 export const HandbookPage = ({className}: HandbookProps) => {
   const arr = [0, 1, 2, 3, 4, 5]
-  const panels = arr.map(index =>
-    <div className={cls.panel_wrapper}>
-    <Disclosure>
-      {({ open }) => (
-        <>
-          <Disclosure.Button className={cls.accordion_button}>
-            <span>
-              <Button size={ButtonSize.S}>{index}</Button>
-              What is your refund policy?</span>
-            {open ? <ChevronDownIcon className={cls.chevron_icon}/> : <ChevronUpIcon className={cls.chevron_icon}/>}
-          </Disclosure.Button>
-          <Disclosure.Panel className={cls.panel}>
-            If you're unhappy with your purchase for any reason, email us
-            within 90 days and we'll refund you in full, no questions asked.
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
-  </div>
-    )
+  const { topicName } = useParams()
+  const requestTopicData = topicName === 'main' ? null : useRequestTopicDataQuery(topicName)
 
   return (
     <div className={classNames(cls.handbook, {}, [className])}>
