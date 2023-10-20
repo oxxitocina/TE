@@ -9,6 +9,7 @@ import Dark from "@/assets/svg/dark.svg?react";
 import Translate from "@/assets/svg/translate.svg?react";
 import { Link } from "react-router-dom";
 import { Routes } from "@/setup/consts/routes/routes";
+import { getQuestions } from "@/setup/api/api";
 
 interface HeaderProps {
   className?: string;
@@ -20,6 +21,10 @@ export const Header = ({ className }: HeaderProps) => {
 
   function handleClick() {
     i18n.changeLanguage(i18n.language === "en" ? "ru" : "en");
+  }
+
+  const handleLoginClick = () => {
+    getQuestions()
   }
 
   return (
@@ -46,7 +51,7 @@ export const Header = ({ className }: HeaderProps) => {
           </li>
           <li><Link to={Routes.MAIN.path}>Home</Link></li>
           <li><Link to={Routes.HANDBOOK.path}>Handbook</Link></li>
-          <li>Login</li>
+          <li onClick={handleLoginClick}>Login</li>
         </ul>
       </div>
     </div>
