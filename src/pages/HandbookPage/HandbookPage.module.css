@@ -1,7 +1,9 @@
 .handbook {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    min-height: 50rem;
-    padding-top: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 50rem;
+  padding: 10px;
+  padding-top: 2rem;
 }

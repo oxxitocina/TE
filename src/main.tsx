@@ -3,22 +3,16 @@ import App from "./App.tsx";
 import "./assets/css/App.css";
 import "./setup/config/i18n/i18n";
 import { ThemeProvider } from "./setup/providers/ThemeProvider/";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Routes } from "./setup/consts/routes/routes";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from 'react-query'
+import { QueryClient, QueryClientProvider } from "react-query";
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: Routes.MAIN.path,
@@ -26,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: Routes.HANDBOOK.path,
-        element: Routes.HANDBOOK.element
+        element: Routes.HANDBOOK.element,
       },
     ],
   },
@@ -34,8 +28,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <QueryClientProvider client={queryClient}>
-  <ThemeProvider>
-    <RouterProvider router={router} />
-  </ThemeProvider>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </QueryClientProvider>,
 );

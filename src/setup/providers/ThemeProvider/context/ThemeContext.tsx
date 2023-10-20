@@ -5,7 +5,7 @@ export enum Theme {
   LIGHT = "light-theme",
 }
 
-export const THEME_LOCALSTORAGE_KEY = 'theme'
+export const THEME_LOCALSTORAGE_KEY = "theme";
 
 export interface ThemeContextProps {
   theme: Theme;

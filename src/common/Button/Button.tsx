@@ -9,10 +9,10 @@ export enum ButtonTheme {
   CLEAR = "clear",
 }
 export enum ButtonSize {
-  DEFAULT = 'default',
-  S = 'small',
-  M = 'medium',
-  L = 'large'
+  DEFAULT = "default",
+  S = "small",
+  M = "medium",
+  L = "large",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -23,7 +23,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = (props: ButtonProps) => {
-  const { className, children, theme = ButtonTheme.PRIMARY, size = ButtonSize.DEFAULT, ...other } = props;
+  const {
+    className,
+    children,
+    theme = ButtonTheme.PRIMARY,
+    size = ButtonSize.DEFAULT,
+    ...other
+  } = props;
 
   return (
     <button

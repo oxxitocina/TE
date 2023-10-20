@@ -24,19 +24,18 @@
   justify-content: center;
   align-items: center;
 
-   &:hover {
+  &:hover {
     box-shadow: 0 0.5em 0.5em -0.4em;
     transform: translateY(-0.25em);
-   }
+  }
 }
 
 .small {
   width: 1rem;
-  height: 1rem
+  height: 1rem;
 }
 
 .medium {
   width: 2rem;
-  height: 2rem
+  height: 2rem;
 }
-

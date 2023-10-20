@@ -1,20 +1,26 @@
 .topics_section {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    min-height: 50rem;
-    padding-top: 2rem;
-    font-size: var(--font-size-m);
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 auto;
+  min-height: 50rem;
+  padding-top: 2rem;
+  font-size: var(--font-size-m);
+
+  li {
+    cursor: pointer;
+  }
 }
 
 .topics_list_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 2rem;
-    font-size: 1rem;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 2rem;
+  font-size: 1rem;
+  gap: 10px;
 }
 
 .topics_wrapper {
-    font-size: var(--font-size-m);
+  font-size: var(--font-size-m);
 }

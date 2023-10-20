@@ -1,5 +1,3 @@
 import { HandbookPage } from "./HandbookPage";
 
-export {
-    HandbookPage
-}
+export { HandbookPage };

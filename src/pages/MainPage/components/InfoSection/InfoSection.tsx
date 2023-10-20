@@ -1,14 +1,14 @@
-import classNames from "classnames"
-import cls from './InfoSection.module.css'
+import classNames from "classnames";
+import cls from "./InfoSection.module.css";
 
 interface InfoSectionProps {
-    className?: string
+  className?: string;
 }
 
-export const InfoSection = ({className}: InfoSectionProps) => {
+export const InfoSection = ({ className }: InfoSectionProps) => {
   return (
     <div className={classNames(cls.info_section, {}, [className])}>
-        <div className={cls.work_section}>
+      <div className={cls.work_section}>
         <div className={`${cls.info_box}`}>
           <div className={cls.title}>How Does it Work?</div>
           <div className={cls.text}>
@@ -41,8 +41,5 @@ export const InfoSection = ({className}: InfoSectionProps) => {
         </div>
       </div>
     </div>
-  )
-}
-
-
-
+  );
+};

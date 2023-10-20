@@ -24,12 +24,14 @@ export const Header = ({ className }: HeaderProps) => {
   }
 
   const handleLoginClick = () => {
-    getQuestions()
-  }
+    getQuestions();
+  };
 
   return (
     <div className={classNames(cls.header, {}, [className])}>
-      <div className={cls.logo}><Link to={Routes.MAIN.path}>BrainWave</Link></div>
+      <div className={cls.logo}>
+        <Link to={Routes.MAIN.path}>BrainWave</Link>
+      </div>
       <div className={cls.searchWrapper}>
         <SearchBar />
       </div>
@@ -49,8 +51,12 @@ export const Header = ({ className }: HeaderProps) => {
               )}
             </IconButton>
           </li>
-          <li><Link to={Routes.MAIN.path}>Home</Link></li>
-          <li><Link to={`/handbook/main`}>Handbook</Link></li>
+          <li>
+            <Link to={Routes.MAIN.path}>Home</Link>
+          </li>
+          <li>
+            <Link to={`/handbook/main`}>Handbook</Link>
+          </li>
           <li onClick={handleLoginClick}>Login</li>
         </ul>
       </div>

@@ -1,59 +1,85 @@
 .main_section {
-    min-height: 50rem;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-  }
-  
-  .heading {
-    font-size: var(--font-size-l);
-    text-align: start;
-  }
-  
-  .content {
-    width: 15rem;
-  }
-  
-  .second_wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .first_wrapper {
-    display: flex;
-    flex: 1;
+  min-height: 50rem;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+
+  @media (max-width: 1100px) {
     flex-direction: column;
-    gap: 20px;
-    justify-content: center;
   }
-  
-  .window {
-    position: absolute;
-    background-color: var(--secondary);
-    padding: 12px;
-    border-radius: 10px;
-    bottom: 12rem;
-    right: 6rem;
-    color: var(--text);
+  @media (max-width: 550px) {
+    /* Phones */
   }
-  
-  .image_wrapper {
-    width: 90%;
-    height: 50%;
-  
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+}
+
+.heading {
+  font-size: var(--font-size-l);
+  text-align: start;
+}
+
+.content {
+  width: 15rem;
+}
+
+.second_wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.first_wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+
+  @media (max-width: 1100px) {
+    align-items: center;
+    text-align: center;
   }
-  
-  .buttons_wrapper {
-    display: flex;
-    gap: 20px;
+}
+
+.window {
+  position: absolute;
+  background-color: var(--secondary);
+  padding: 12px;
+  border-radius: 10px;
+  bottom: 12rem;
+  right: 6rem;
+  color: var(--text);
+
+  @media (max-width: 1100px) {
+    bottom: 10%
   }
+
+  @media (max-width: 550px) {
+    bottom: 15%;
+  }
+}
+
+.image_wrapper {
+  width: 90%;
+  height: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 1100px) {
+    width: 75%;
+  }
+}
+
+.buttons_wrapper {
+  display: flex;
+  gap: 20px;
+}

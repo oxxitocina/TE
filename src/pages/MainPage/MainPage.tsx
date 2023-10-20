@@ -11,11 +11,11 @@ interface MainPageProps {
 export const MainPage = ({ className }: MainPageProps) => {
   return (
     <>
-    <div className={classNames(cls.main_page, {}, [className])}>
-      <MainSection/>
-      <InfoSection/>
-      <SearchSection/>
-    </div>    
+      <div className={classNames(cls.main_page, {}, [className])}>
+        <MainSection />
+        <InfoSection />
+        <SearchSection />
+      </div>
     </>
   );
 };

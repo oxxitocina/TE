@@ -11,8 +11,8 @@ function App() {
   return (
     <div className={classNames("app", [theme])}>
       <Header />
-        <Outlet/>
-      <Footer/>
+      <Outlet />
+      <Footer />
     </div>
   );
 }

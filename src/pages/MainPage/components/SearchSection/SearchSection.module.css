@@ -1,25 +1,25 @@
 .search_section {
-    padding-top: 8rem;
+  padding-top: 8rem;
 }
 
 .topic {
-    font-size: var(--font-size-l);
-    text-align: center;
+  font-size: var(--font-size-l);
+  text-align: center;
 }
 
 .seach_wrapper {
-    padding-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .text {
-    font-size: var(--font-size-s);
-    text-align: center;
+  font-size: var(--font-size-s);
+  text-align: center;
 }
 
 .searchbar_wrapper {
-    height: 3rem;
-    box-sizing: border-box;
+  height: 3rem;
+  box-sizing: border-box;
 }
