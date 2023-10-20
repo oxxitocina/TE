@@ -10,6 +10,9 @@ import Translate from "@/assets/svg/translate.svg?react";
 import { Link } from "react-router-dom";
 import { Routes } from "@/setup/consts/routes/routes";
 import { getQuestions } from "@/setup/api/api";
+import { MenuModal } from "@/common/MenuModal/MenuModal";
+import { useState } from 'react'
+import MenuIcon from '@/assets/svg/menu.svg?react'
 
 interface HeaderProps {
   className?: string;
@@ -18,6 +21,7 @@ interface HeaderProps {
 export const Header = ({ className }: HeaderProps) => {
   const { t, i18n } = useTranslation("common");
   const { theme, toggleTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   function handleClick() {
     i18n.changeLanguage(i18n.language === "en" ? "ru" : "en");
@@ -26,6 +30,10 @@ export const Header = ({ className }: HeaderProps) => {
   const handleLoginClick = () => {
     getQuestions();
   };
+
+  const toggleButton = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div className={classNames(cls.header, {}, [className])}>
@@ -58,8 +66,11 @@ export const Header = ({ className }: HeaderProps) => {
             <Link to={`/handbook/main`}>Handbook</Link>
           </li>
           <li onClick={handleLoginClick}>Login</li>
+          <li><IconButton onClick={toggleButton}><MenuIcon/></IconButton></li>
         </ul>
       </div>
+
+      {isOpen === true ? <MenuModal onClose={toggleButton}/> : undefined}
     </div>
   );
 };

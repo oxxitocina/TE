@@ -1,7 +1,6 @@
 import { useTheme } from "./setup/providers/ThemeProvider";
 import classNames from "classnames";
 import { Header } from "./widgets/Header";
-import { MainPage } from "./pages/MainPage";
 import { Footer } from "./widgets/Footer";
 import { Outlet } from "react-router-dom";
 
