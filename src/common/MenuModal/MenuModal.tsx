@@ -45,12 +45,12 @@ export const MenuModal = ({ className, onClose }: MenuModalProps) => {
 
           <ul className={cls.nav}>
             <li>
-              <Link to={Routes.MAIN.path}>Home</Link>
+              <Link to={Routes.MAIN.path}>{t('Home')}</Link>
             </li>
             <li>
-              <Link to={`/handbook/main`}>Handbook</Link>
+              <Link to={`/handbook/main`}>{t('Handbook')}</Link>
             </li>
-            <li>Login</li>
+            <li>{t('Login')}</li>
           </ul>
 
       </div>

@@ -56,12 +56,12 @@ export const Header = ({ className }: HeaderProps) => {
             </IconButton>
           </li>
           <li>
-            <Link to={Routes.MAIN.path}>Home</Link>
+            <Link to={Routes.MAIN.path}>{t('Home')}</Link>
           </li>
           <li>
-            <Link to={`/handbook/main`}>Handbook</Link>
+            <Link to={`/handbook/main`}>{t('Handbook')}</Link>
           </li>
-          <li>Login</li>
+          <li>{t('Login')}</li>
         </ul>
         <IconButton className={cls.menu_button} onClick={toggleButton}>
           <MenuIcon />
