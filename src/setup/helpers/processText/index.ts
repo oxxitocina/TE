@@ -1,5 +1,3 @@
 import { processText } from "./processText";
 
-export {
-    processText
-}
+export { processText };

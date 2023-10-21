@@ -7,14 +7,18 @@ interface SpinnerProps {
 }
 
 export const Spinner = ({ className }: SpinnerProps) => {
-
   return (
     <Portal>
-        <div className={classNames(cls.spinner, {}, [className])}>
-            <div className={cls.spinner_wrapper}>
-            <div className={cls.lds_ring}><div></div><div></div><div></div><div></div></div>
-            </div>
+      <div className={classNames(cls.spinner, {}, [className])}>
+        <div className={cls.spinner_wrapper}>
+          <div className={cls.lds_ring}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
+      </div>
     </Portal>
   );
 };

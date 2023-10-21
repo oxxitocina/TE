@@ -8,11 +8,11 @@ interface TopicsSectionProps {
 }
 
 export const TopicsSection = ({ className }: TopicsSectionProps) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleClick = (topic: string) => {
-    navigate(`/handbook/${topic}`)
-  }
+    navigate(`/handbook/${topic}`);
+  };
 
   return (
     <div className={classNames(cls.topics_section, {}, [className])}>
@@ -20,7 +20,12 @@ export const TopicsSection = ({ className }: TopicsSectionProps) => {
       <ul className={cls.topics_list_grid}>
         {TOPICS.map((topic, index) => {
           return (
-            <li key={`${topic}-${index}`} onClick={() => {handleClick(topic)}}>
+            <li
+              key={`${topic}-${index}`}
+              onClick={() => {
+                handleClick(topic);
+              }}
+            >
               {index + 1}. {topic}
             </li>
           );
