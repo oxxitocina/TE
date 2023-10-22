@@ -1,7 +1,7 @@
 import { useTheme } from "./setup/providers/ThemeProvider";
 import classNames from "classnames";
-import { Header } from "./widgets/Header";
-import { Footer } from "./widgets/Footer";
+import { Header } from "./common/Layout/Header";
+import { Footer } from "./common/Layout/Footer";
 import { Outlet } from "react-router-dom";
 
 function App() {

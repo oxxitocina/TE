@@ -22,6 +22,10 @@ const router = createBrowserRouter([
         path: Routes.HANDBOOK.path,
         element: Routes.HANDBOOK.element,
       },
+      {
+        path: Routes.QUIZ_PAGE.path,
+        element: Routes.QUIZ_PAGE.element
+      }
     ],
   },
 ]);
