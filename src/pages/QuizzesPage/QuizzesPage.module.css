@@ -14,7 +14,8 @@
 
 .question_wrapper {
     background-color: var(--secondary);
-    padding: 1rem
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 .answers_wrapper {
@@ -31,4 +32,15 @@
     padding: 0.5rem;
     border-radius: 50%;
     border: none;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.check_button {
+    padding: 1rem;
+    border-radius: 50%;
 }
