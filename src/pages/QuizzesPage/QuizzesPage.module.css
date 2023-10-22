@@ -17,34 +17,3 @@
     padding: 1rem;
     border-radius: 8px;
 }
-
-.answers_wrapper {
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    li {
-
-    }
-}
-
-.ratio_button {
-    padding: 0.5rem;
-    border-radius: 50%;
-    border: none;
-}
-
-.answer {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.answer2 {
-    background-color: var(--accent);
-}
-
-.check_button {
-    padding: 1rem;
-    border-radius: 50%;
-}

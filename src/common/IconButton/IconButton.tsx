@@ -10,7 +10,7 @@ export enum IconButtonSize {
 
 interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  children: ReactNode;
+  children?: ReactNode;
   size?: IconButtonSize;
 }
 
