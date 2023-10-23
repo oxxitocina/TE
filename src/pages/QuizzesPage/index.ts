@@ -1,5 +1,3 @@
 import { QuizzesPage } from "./QuizzesPage";
 
-export {
-    QuizzesPage
-}
+export { QuizzesPage };

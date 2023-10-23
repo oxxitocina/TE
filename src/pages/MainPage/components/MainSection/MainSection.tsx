@@ -9,21 +9,21 @@ interface MainSectionProps {
 }
 
 export const MainSection = ({ className }: MainSectionProps) => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation("common");
 
   return (
     <div className={classNames(cls.main_section, {}, [className])}>
       <div className={cls.first_wrapper}>
         <div className={cls.heading}>
-          {t('Smart skills for 21st century learners.')}
+          {t("Smart skills for 21st century learners.")}
         </div>
         <div className={cls.content}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
           ipsam deleniti, quos
         </div>
         <div className={cls.buttons_wrapper}>
-          <Button theme={ButtonTheme.SECONDARY}>{t('How does it work')}</Button>
-          <Button theme={ButtonTheme.PRIMARY}>{t('Get Started')}</Button>
+          <Button theme={ButtonTheme.SECONDARY}>{t("How does it work")}</Button>
+          <Button theme={ButtonTheme.PRIMARY}>{t("Get Started")}</Button>
         </div>
       </div>
       <div className={cls.second_wrapper}>

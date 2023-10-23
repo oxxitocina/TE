@@ -31,7 +31,7 @@
   padding-right: 1.5rem;
   gap: 15px;
   color: var(--text);
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
 
   a {
     color: var(--text);

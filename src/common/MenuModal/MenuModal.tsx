@@ -43,16 +43,15 @@ export const MenuModal = ({ className, onClose }: MenuModalProps) => {
           </IconButton>
         </div>
 
-          <ul className={cls.nav}>
-            <li>
-              <Link to={Routes.MAIN.path}>{t('Home')}</Link>
-            </li>
-            <li>
-              <Link to={`/handbook/main`}>{t('Handbook')}</Link>
-            </li>
-            <li>{t('Login')}</li>
-          </ul>
-
+        <ul className={cls.nav}>
+          <li>
+            <Link to={Routes.MAIN.path}>{t("Home")}</Link>
+          </li>
+          <li>
+            <Link to={`/handbook/main`}>{t("Handbook")}</Link>
+          </li>
+          <li>{t("Login")}</li>
+        </ul>
       </div>
     </Portal>
   );

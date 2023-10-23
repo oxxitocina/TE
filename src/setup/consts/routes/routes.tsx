@@ -13,8 +13,8 @@ export const Routes = {
     element: <HandbookPage />,
   },
   QUIZ_PAGE: {
-    path: '/quiz/:topicName',
-    element: <QuizzesPage/>
+    path: "/quiz/:topicName",
+    element: <QuizzesPage />,
   },
   NOT_FOUND_PAGE: {
     path: "*",

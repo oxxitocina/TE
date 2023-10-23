@@ -24,8 +24,8 @@ const router = createBrowserRouter([
       },
       {
         path: Routes.QUIZ_PAGE.path,
-        element: Routes.QUIZ_PAGE.element
-      }
+        element: Routes.QUIZ_PAGE.element,
+      },
     ],
   },
 ]);

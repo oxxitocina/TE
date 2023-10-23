@@ -23,11 +23,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &:hover {
-    box-shadow: 0 0.5em 0.5em -0.4em;
-    transform: translateY(-0.25em);
-  }
 }
 
 .small {

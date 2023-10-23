@@ -20,7 +20,7 @@
   font-size: 1rem;
   gap: 10px;
 
-  @media (max-width: 550px) {
+  @media (width <= 550px) {
     grid-template-columns: 1fr;
   }
 }
