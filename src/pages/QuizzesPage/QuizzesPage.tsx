@@ -19,7 +19,7 @@ export const QuizzesPage = ({ className }: QuizzesPageProps) => {
             <div className={cls.question}>
               Which hero is the strongest in dota?
             </div>
-            <AnswersList />
+            <AnswersList questionCount={index}/>
           </div>
         ))}
 

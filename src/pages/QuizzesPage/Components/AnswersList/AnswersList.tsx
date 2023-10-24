@@ -4,9 +4,10 @@ import CheckIcon from "@/assets/svg/check.svg?react";
 
 interface AnswersListProps {
   className?: string;
+  questionCount: number
 }
 
-export const AnswersList = ({ className }: AnswersListProps) => {
+export const AnswersList = ({ className, questionCount }: AnswersListProps) => {
   const [isAnswer, setIsAnswer] = useState<number | null>(null);
   const [answers, setAnswers] = useState<number[] | null>(null);
 
