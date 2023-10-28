@@ -9,6 +9,7 @@ interface AnswersListProps {
   setAnswers: () => void;
   isDone: boolean;
   rightAnswer?: number;
+  quizAnswers
 }
 
 export const AnswersList = ({
@@ -17,6 +18,7 @@ export const AnswersList = ({
   setAnswers,
   isDone,
   rightAnswer,
+  quizAnswers
 }: AnswersListProps) => {
   const [isAnswer, setIsAnswer] = useState<number | null>(null);
 
@@ -31,7 +33,7 @@ export const AnswersList = ({
 
   return (
     <ul className={cls.answers_wrapper}>
-      {arr2.map((answer, index) => (
+      {quizAnswers.map((answer, index) => (
         <li
           className={
             isDone === false
@@ -52,7 +54,7 @@ export const AnswersList = ({
               <CheckIcon className={cls.check_icon} />
             ) : undefined}
           </button>
-          <p>Lorem, ipsum.</p>
+          <p>{answer}</p>
         </li>
       ))}
     </ul>

@@ -1,30 +1,18 @@
-import { BASE_URL, API_KEY } from "../instance";
+import { makeRequest } from "../instance";
 
-export async function requestByTopicQuestions(topic = "white shark") {
-  const response = await fetch(BASE_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json;charset=utf-8",
-      Authorization: `Bearer ${API_KEY}`,
-    },
-    body: JSON.stringify({
+export const requestByQuestions = (topic = "white shark") => {
+  return makeRequest({
+    method: "post",
+    data: JSON.stringify({
       model: "gpt-3.5-turbo",
       messages: [
         {
           role: "user",
-          content: `Write to me about ${topic} using headlines and number and a dot. Write exactly 6 subtopics.Do not repeat. Subtopics must always end with ':::'. Write a little text. For example:
-
-        1. Anatomy of white sharks:::
-        They have powerful fins. They swim fast
-        
-        2. The life of white sharks:::
-        They live in the ocean and do not know fear. They are afraid to turn over`,
+          content: `Write me a quiz of ten questions with four possible answers about ${topic} with different answers. Dont specify correct answers. The question should always start with a number and a dot. At the end of the response provide an js array with the index of right answers for each question.Example: 1. What is the main selling point of Romanovsky Products' sandwiches?\na) They are made with only the freshest ingredients and are always packed with flavor\nb) They are the cheapest sandwiches on the market\nc) They are pre-made and ready to go\nd) None of the above 2. What is the main selling point of Romanovsky Products' sandwiches?\na) They are made with only the freshest ingredients and are always packed with flavor\nb) They are the cheapest sandwiches on the market\nc) They are pre-made and ready to go\nd) None of the above [2, 0]`,
         },
       ],
       temperature: 0.7,
     }),
   });
+};
 
-  const result = await response.json();
-  return result;
-}

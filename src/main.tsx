@@ -7,7 +7,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Routes } from "./setup/consts/routes/routes";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const router = createBrowserRouter([
   {
