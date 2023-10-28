@@ -4,30 +4,43 @@ import CheckIcon from "@/assets/svg/check.svg?react";
 
 interface AnswersListProps {
   className?: string;
-  questionCount: number
+  questionCount: number;
+  answers: number[];
+  setAnswers: () => void;
+  isDone: boolean;
+  rightAnswer?: number;
 }
 
-export const AnswersList = ({ className, questionCount }: AnswersListProps) => {
+export const AnswersList = ({
+  questionCount,
+  answers,
+  setAnswers,
+  isDone,
+  rightAnswer
+}: AnswersListProps) => {
   const [isAnswer, setIsAnswer] = useState<number | null>(null);
-  const [answers, setAnswers] = useState<number[] | null>(null);
 
   const arr2 = [0, 1, 2, 3];
 
   const handleClick = (id: number) => {
     setIsAnswer(id);
+    const newAnswers = [...answers];
+    newAnswers[questionCount] = id;
+    setAnswers(newAnswers);
   };
 
   return (
     <ul className={cls.answers_wrapper}>
       {arr2.map((answer, index) => (
         <li
-          className={isAnswer === index ? cls.answer2 : cls.answer}
-          onClick={() => {
-            handleClick(index);
-          }}
+          className={isDone === false ? cls.answer : index === rightAnswer ? cls.answer2 : cls.answer}
         >
-            {isAnswer === index ? <button className={cls.check_button}><CheckIcon className={cls.check_icon}/></button> : <button className={cls.check_button}/>}
-          <p>Trent Protector</p>
+            <button disabled={isDone} className={cls.check_button} onClick={() => {
+              handleClick(index);
+            }}>
+              {isAnswer === index ? <CheckIcon className={cls.check_icon} /> : undefined}
+            </button>
+          <p>Lorem, ipsum.</p>
         </li>
       ))}
     </ul>
