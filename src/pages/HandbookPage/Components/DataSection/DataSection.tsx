@@ -13,10 +13,8 @@ interface DataSectionProps {
 }
 
 export const DataSection = ({ className, topic }: DataSectionProps) => {
-  // const arr = [0, 1, 2, 3, 4, 5];
   // const { isLoading, data } = useRequestTopicDataQuery({topic})
-  // const temp = isLoading === true ? null : processText(data?.choices[0]?.message?.content);
-  // console.log(temp)
+  // const temp = isLoading === true ? null : processText(data?.data?.choices[0]?.message?.content);
 
   const isLoading = false;
   const temp = [
@@ -48,7 +46,7 @@ export const DataSection = ({ className, topic }: DataSectionProps) => {
 
   return (
     <div className={classNames(cls.data_section, {}, [className])}>
-      {isLoading === true ? <Spinner /> : undefined}
+      {isLoading && <Spinner />}
 
       <div className={cls.accordion_wrapper}>
         {temp &&

@@ -9,31 +9,30 @@ interface QuizzesPageProps {
 }
 
 export const QuizzesPage = ({ className }: QuizzesPageProps) => {
-  const [ isDone, setIsDone ] = useState<boolean>(false)
+  const [isDone, setIsDone] = useState<boolean>(false);
   const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   const [answers, setAnswers] = useState<number[] | null[]>(
     new Array(arr.length).fill(null),
   );
-  const rightAnswers = [2, 1, 1, 2, 0, 2, 2, 1, 1, 1]
+  const rightAnswers = [2, 1, 1, 2, 0, 2, 2, 1, 1, 1];
 
   const handleSubmit = () => {
-    if(answers.includes(null)) {
-      alert('wad')
-      return
+    if (answers.includes(null)) {
+      alert("wad");
+      return;
     }
 
-    let counter = 0
+    let counter = 0;
 
-    for(let i = 0; i<answers.length; i++) {
-      if(answers[i] === rightAnswers[i]) {
-        counter++
+    for (let i = 0; i < answers.length; i++) {
+      if (answers[i] === rightAnswers[i]) {
+        counter++;
       }
     }
 
-    alert(`${counter} right out of ${answers.length}`)
-    setIsDone(true)
-
-  }
+    alert(`${counter} right out of ${answers.length}`);
+    setIsDone(true);
+  };
 
   console.log(answers);
 
@@ -54,8 +53,14 @@ export const QuizzesPage = ({ className }: QuizzesPageProps) => {
           </div>
         ))}
 
-        <Button onClick={handleSubmit} className={cls.button}>Submit</Button>
-        {isDone && <Button onClick={handleSubmit} className={cls.button}>Back to handbook</Button>}
+        <Button onClick={handleSubmit} className={cls.button}>
+          Submit
+        </Button>
+        {isDone && (
+          <Button onClick={handleSubmit} className={cls.button}>
+            Back to handbook
+          </Button>
+        )}
       </div>
     </div>
   );

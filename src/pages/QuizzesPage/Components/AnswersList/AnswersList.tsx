@@ -16,7 +16,7 @@ export const AnswersList = ({
   answers,
   setAnswers,
   isDone,
-  rightAnswer
+  rightAnswer,
 }: AnswersListProps) => {
   const [isAnswer, setIsAnswer] = useState<number | null>(null);
 
@@ -33,13 +33,25 @@ export const AnswersList = ({
     <ul className={cls.answers_wrapper}>
       {arr2.map((answer, index) => (
         <li
-          className={isDone === false ? cls.answer : index === rightAnswer ? cls.answer2 : cls.answer}
+          className={
+            isDone === false
+              ? cls.answer
+              : index === rightAnswer
+              ? cls.answer2
+              : cls.answer
+          }
         >
-            <button disabled={isDone} className={cls.check_button} onClick={() => {
+          <button
+            disabled={isDone}
+            className={cls.check_button}
+            onClick={() => {
               handleClick(index);
-            }}>
-              {isAnswer === index ? <CheckIcon className={cls.check_icon} /> : undefined}
-            </button>
+            }}
+          >
+            {isAnswer === index ? (
+              <CheckIcon className={cls.check_icon} />
+            ) : undefined}
+          </button>
           <p>Lorem, ipsum.</p>
         </li>
       ))}
