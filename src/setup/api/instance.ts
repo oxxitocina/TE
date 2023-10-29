@@ -1,7 +1,5 @@
 import axios from "axios";
-
-export const BASE_URL = "https://api.openai.com/v1/chat/completions";
-export const API_KEY = "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";
+import { BASE_URL, API_KEY } from "../consts/api/api";
 
 export const makeRequest = ({
   url = BASE_URL,

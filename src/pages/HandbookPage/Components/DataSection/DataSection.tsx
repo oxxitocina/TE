@@ -13,8 +13,11 @@ interface DataSectionProps {
 }
 
 export const DataSection = ({ className, topic }: DataSectionProps) => {
-  const { isLoading, data } = useRequestTopicDataQuery({topic})
-  const temp = isLoading === true ? null : processText(data?.data?.choices[0]?.message?.content);
+  const { isLoading, data } = useRequestTopicDataQuery({ topic });
+  const temp =
+    isLoading === true
+      ? null
+      : processText(data?.data?.choices[0]?.message?.content);
 
   // const isLoading = false;
   // const temp = [

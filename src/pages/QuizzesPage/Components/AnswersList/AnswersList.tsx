@@ -9,7 +9,7 @@ interface AnswersListProps {
   setAnswers: () => void;
   isDone: boolean;
   rightAnswer?: number;
-  quizAnswers
+  quizAnswers;
 }
 
 export const AnswersList = ({
@@ -18,11 +18,9 @@ export const AnswersList = ({
   setAnswers,
   isDone,
   rightAnswer,
-  quizAnswers
+  quizAnswers,
 }: AnswersListProps) => {
   const [isAnswer, setIsAnswer] = useState<number | null>(null);
-
-  const arr2 = [0, 1, 2, 3];
 
   const handleClick = (id: number) => {
     setIsAnswer(id);

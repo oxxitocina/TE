@@ -12,10 +12,10 @@ interface HandbookProps {
 export const HandbookPage = ({ className }: HandbookProps) => {
   const { topicName } = useParams();
   const topic = topicName as string;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/quiz/${topic}`)
+    navigate(`/quiz/${topic}`);
   };
 
   return (
@@ -23,7 +23,7 @@ export const HandbookPage = ({ className }: HandbookProps) => {
       <TopicsSection />
       {topic === "main" ? undefined : <DataSection topic={topic} />}
       <div className={cls.button_wrapper}>
-          <Button onClick={handleClick}>Go to quiz</Button>
+        <Button onClick={handleClick}>Go to quiz</Button>
       </div>
     </div>
   );

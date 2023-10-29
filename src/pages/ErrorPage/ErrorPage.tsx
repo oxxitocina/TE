@@ -6,5 +6,5 @@ interface ErrorPageProps {
 }
 
 export const ErrorPage = ({ className }: ErrorPageProps) => {
-  return <div className={classNames(cls.ErrorPage, {}, [className])}></div>;
+  return <div className={classNames(cls.error_page, {}, [className])}></div>;
 };

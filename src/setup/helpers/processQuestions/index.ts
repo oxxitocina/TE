@@ -1,3 +1,3 @@
 import { processQuestions } from "./processQuestions";
 
-export { processQuestions }
+export { processQuestions };
