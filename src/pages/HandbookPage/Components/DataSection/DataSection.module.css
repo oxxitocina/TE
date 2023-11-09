@@ -42,6 +42,9 @@
   padding: 2rem;
   box-sizing: border-box;
   border-radius: 0 0 7px 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .panel_wrapper {

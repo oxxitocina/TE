@@ -19,6 +19,7 @@ export const Quiz = ({ data }: QuizProps) => {
   );
   // const temp = isLoading === true ? null : processText(data?.data?.choices[0]?.message?.content);
 
+
   const handleSubmit = () => {
     if (answers.includes(null)) {
       alert("wad");

@@ -18,8 +18,7 @@ export const MainSection = ({ className }: MainSectionProps) => {
           {t("Smart skills for 21st century learners.")}
         </div>
         <div className={cls.content}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-          ipsam deleniti, quos
+        {t("Study faster")}
         </div>
         <div className={cls.buttons_wrapper}>
           <Button theme={ButtonTheme.SECONDARY}>{t("How does it work")}</Button>
@@ -31,8 +30,7 @@ export const MainSection = ({ className }: MainSectionProps) => {
           <img src={LearningImage} />
         </div>
         <div className={cls.window}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
-          deserunt recusandae
+        {t("Get your study plan")}
         </div>
       </div>
     </div>
