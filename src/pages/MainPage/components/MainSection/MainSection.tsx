@@ -17,9 +17,7 @@ export const MainSection = ({ className }: MainSectionProps) => {
         <div className={cls.heading}>
           {t("Smart skills for 21st century learners.")}
         </div>
-        <div className={cls.content}>
-        {t("Study faster")}
-        </div>
+        <div className={cls.content}>{t("Study faster")}</div>
         <div className={cls.buttons_wrapper}>
           <Button theme={ButtonTheme.SECONDARY}>{t("How does it work")}</Button>
           <Button theme={ButtonTheme.PRIMARY}>{t("Get Started")}</Button>
@@ -29,9 +27,7 @@ export const MainSection = ({ className }: MainSectionProps) => {
         <div className={cls.image_wrapper}>
           <img src={LearningImage} />
         </div>
-        <div className={cls.window}>
-        {t("Get your study plan")}
-        </div>
+        <div className={cls.window}>{t("Get your study plan")}</div>
       </div>
     </div>
   );

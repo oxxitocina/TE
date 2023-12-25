@@ -4,6 +4,7 @@ import { TopicsSection } from "./Components/TopicsSection/TopicsSection";
 import { DataSection } from "./Components/DataSection/DataSection";
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/common/Button/Button";
+import { Input } from "@/common/Input/Input";
 
 interface HandbookProps {
   className?: string;
@@ -20,10 +21,12 @@ export const HandbookPage = ({ className }: HandbookProps) => {
 
   return (
     <div className={classNames(cls.handbook, {}, [className])}>
-      <TopicsSection />
-      {topic === "main" ? undefined : <DataSection topic={topic} />}
-      <div className={cls.button_wrapper}>
-        <Button onClick={handleClick}>Go to quiz</Button>
+      <div className={cls.story_form}>
+          <form>
+            <Input/>
+            <Input/> 
+            <Input/>  
+          </form>
       </div>
     </div>
   );
