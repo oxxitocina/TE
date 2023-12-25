@@ -7,6 +7,8 @@ import { Outlet } from "react-router-dom";
 function App() {
   const { theme } = useTheme();
 
+  console.log(1)
+
   return (
     <div className={classNames("app", [theme])}>
       <Header />
